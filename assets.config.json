@@ -1,0 +1,32 @@
+{
+  "auto-cert": {
+    "type": "rollup",
+    "options": {
+      "entrypoint": "./lib/auto-cert/lambda.js"
+    }
+  },
+  "empty-bucket": {
+    "type": "rollup",
+    "options": {
+      "entrypoint": "./lib/empty-bucket/lambda.js"
+    }
+  },
+  "get-stream-arn": {
+    "type": "rollup",
+    "options": {
+      "entrypoint": "./lib/get-stream-arn/lambda.js"
+    }
+  },
+  "put-object": {
+    "type": "rollup",
+    "options": {
+      "entrypoint": "./lib/put-object/lambda.js"
+    }
+  },
+  "unpack-asset": {
+    "type": "rollup",
+    "options": {
+      "entrypoint": "./lib/unpack-asset/lambda.js"
+    }
+  }
+}
