@@ -9,7 +9,7 @@ import {
 } from '@squareball/cfntemplate';
 import { CustomResourceInstance } from '../common/CustomResourceInstance.js';
 import { CustomResourceFactory } from '../internal/CustomResourceFactory.js';
-import { PackagePath } from '../internal/PackagePath.js';
+import { PackagePath } from '../internal/PackagePath.cjs';
 import { UnpackAssetProps } from './UnpackAssetProps.js';
 
 export type UnpackAssetResource = CustomResourceInstance<UnpackAssetProps>;

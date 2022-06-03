@@ -16,7 +16,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "./lib/cjs/index.js",
+  "main": "./cjs/index.js",
   "module": "./lib/index.js",
   "types": "lib/index.d.ts",
   "exports": {
@@ -24,17 +24,14 @@
   },
   "files": [
     "dist/*.zip",
-    "lib/**/*.js",
-    "lib/**/*.d.ts",
-    "lib/**/*.map",
-    "!lib/**/*.test.*",
-    "src/**/*.ts",
-    "!src/**/*.test.ts"
+    "lib/",
+    "cjs/",
+    "src/"
   ],
   "scripts": {
-    "build": "npm run clean && npm run index && npm run compile && npm run compile:cjs && npm run lint && npm run bundle && npm run docs",
+    "build": "npm run clean && npm run compile && npm run compile:cjs && npm run lint && npm run bundle && npm run docs",
     "bundle": "cfnassets build --config assets.config.json",
-    "clean": "rm -rf docs/ lib/ *.tsbuildinfo",
+    "clean": "rm -rf lib/ cjs/ *.tsbuildinfo",
     "compile": "npm run index && tsc",
     "compile:cjs": "tsc -p tsconfig.cjs.json",
     "dev:docs": "concurrently --kill-others npm:watch:docs npm:serve:docs",
@@ -80,8 +77,8 @@
     "rollup": "^2.74.0",
     "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-terser": "^7.0.2",
-    "typedoc": "^0.22.11",
-    "typescript": "^4.5.5",
+    "typedoc": "^0.22.17",
+    "typescript": "^4.7.2",
     "yauzl": "^2.10.0"
   },
   "dependencies": {
